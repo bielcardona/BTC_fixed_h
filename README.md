@@ -1,4 +1,4 @@
-# Supplementary files for "Generation of Tree-Child phylogenetic networks"
+# Supplementary files for "On binary tree-child phylogenetic networks with a fixed number of hybrid nodes"
 ## By G. Cardona
 
 If you have `pipenv` installed, the requirements can be installed by executing `pipenv install`. Notice however that `graphviz` must be installed previously (only needed to run the Jupyter notebook).
