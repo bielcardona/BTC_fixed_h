@@ -1,0 +1,19 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+phylonetwork = "*"
+jupyter = "*"
+pygraphviz = "*"
+matplotlib = "==2.1.2"
+networkx = "*"
+scipy = "*"
+tqdm = "*"
+sympy = "*"
+
+[requires]
+python_version = "3.7.3"

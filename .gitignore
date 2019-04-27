@@ -3,3 +3,7 @@
 Pipfile.lock
 __pycache__
 attic
+*.pyc
+test.py
+test2.py
+testproduct.py
