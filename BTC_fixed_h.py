@@ -1,6 +1,35 @@
-from itertools import permutations, combinations_with_replacement, product
+from itertools import permutations, combinations_with_replacement #, product
 from collections import defaultdict, Counter
 import networkx as nx
+
+
+def simple_product(it1, it2):
+    gone = []
+    x = it1.__next__()
+    for y in it2:
+        gone.append(y)
+        yield x, y
+    for x in it1:
+        for y in gone:
+            yield x, y
+
+
+def product(*iterables):
+    """
+    https://stackoverflow.com/questions/55882454/is-there-a-way-to-efficiently-compute-the-product-of-two-or-more-iterators
+    """
+    if len(iterables) == 2:
+        yield from simple_product(*iterables)
+        return
+    it1, *rest = iterables
+    gone = []
+    x = it1.__next__()
+    for t in product(*rest):
+        gone.append(t)
+        yield (x,) + t
+    for x in it1:
+        for t in gone:
+            yield (x,) + t
 
 
 def partitions(l):
@@ -194,6 +223,13 @@ def tree_generator(taxa):
 
 
 def split_permutation(perm, sep='|'):
+    """
+    Splits the list `perm` into sublists, indicated by the separator `sep`.
+    Example: ['a','|','b','c','|','|','d','|'] -> [['a'],['b','c'],[],['d'],[]]
+    :param perm:
+    :param sep:
+    :return:
+    """
     output = []
     actual = []
     for x in perm:
@@ -245,18 +281,6 @@ def annotated_forest_generator(part, dag):
             forest.add_edge(u, hybrids[Tlab])
         root = [u for u in forest.nodes() if forest.in_degree(u) == 0][0]
         forest.remove_node(root)
-        yield forest
-
-
-def forest_generator(part):
-    """
-    Returns a generator that yields all binary forests where each component is
-    a phyogenetic tree labeled by one of the blocks of the partition `part`
-    """
-    tgs = [tree_generator(block) for block in part]
-    fg = product(*tgs)
-    for f in fg:
-        forest = nx.disjoint_union_all(f)
         yield forest
 
 
