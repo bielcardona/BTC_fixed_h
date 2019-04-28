@@ -1,0 +1,3 @@
+networkx==1.11
+pygraphviz
+matplotlib==2.1.2

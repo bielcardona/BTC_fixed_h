@@ -6,14 +6,9 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-phylonetwork = "*"
 jupyter = "*"
 pygraphviz = "*"
 matplotlib = "==2.1.2"
-networkx = "*"
-scipy = "*"
-tqdm = "*"
-sympy = "*"
+networkx = "==1.11"
 
-[requires]
-python_version = "3.7.3"
+
