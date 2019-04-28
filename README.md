@@ -10,3 +10,9 @@ The jupyter notebook can also be run without installing anything: [![Binder](htt
 The `sage` scripts need to be executed using SageMath (http://www.sagemath.org/)
 
 The included files are:
+
+* `BTC_fixed_h.py`: Python module that implements the generation of BTC networks with a fixed number of hybrid nodes.
+* `BTC_nh-Generator.ipynb`: Jupyter notebook that demonstrates the sequential generation of BTC networks with fixed number of hybrid nodes using the module `BTC_fixed_h.py`.
+* `formula_maker.sage`: Sage script that implements the obtention of formulas for the number of BTC networks with a fixed number of hybrid nodes, and uses these formulas to compute these numbers.
+* `counts_BTC_nh.txt`: Results showing the number of BTC networks with n <= 8 leaves and h < n hybrid nodes.
+* `formulas.txt`: Formulas for the number of BTC networks with h <= 7 hybrid nodes.
