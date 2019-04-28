@@ -5,6 +5,8 @@ If you have `pipenv` installed, the requirements can be installed by executing `
 Once installed, the jupyter 
 notebooks can be run with `pipenv run jupyter-notebook`, and the scripts with `pipenv run python script.py`.
 
+The jupyter notebook can also be run without installing anything: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/bielcardona/BTC_fixed_h/master?filepath=BTC_nh-Generator.ipynb)
+
 The `sage` scripts need to be executed using SageMath (http://www.sagemath.org/)
 
 The included files are:
