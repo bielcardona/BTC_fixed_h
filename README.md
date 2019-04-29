@@ -1,9 +1,9 @@
 # Supplementary files for "On binary tree-child phylogenetic networks with a fixed number of hybrid nodes"
 ## By G. Cardona
 
-If you have `pipenv` installed, the requirements can be installed by executing `pipenv install`. Notice however that `graphviz` must be installed previously (only needed to run the Jupyter notebook).
+If you have `pipenv` installed, the requirements can be installed by executing `pipenv install`. Notice however that `graphviz` must be installed previously.
 Once installed, the jupyter 
-notebooks can be run with `pipenv run jupyter-notebook`, and the scripts with `pipenv run python script.py`.
+notebook can be run with `pipenv run jupyter-notebook`.
 
 The jupyter notebook can also be run without installing anything: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/bielcardona/BTC_fixed_h/master?filepath=BTC_nh-Generator.ipynb)
 
