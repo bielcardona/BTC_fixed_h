@@ -7,3 +7,6 @@ attic
 test.py
 test2.py
 testproduct.py
+formula_maker.sage.py
+formula_maker.ipynb
+Generate_n_h.ipynb
