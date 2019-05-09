@@ -4,12 +4,16 @@ import networkx as nx
 
 
 def simple_product(it1, it2):
+    if not it1 or not it2:
+        return
+    it1x = iter(it1)
+    it2x = iter(it2)
     gone = []
-    x = it1.__next__()
-    for y in it2:
+    x = it1x.__next__()
+    for y in it2x:
         gone.append(y)
         yield x, y
-    for x in it1:
+    for x in it1x:
         for y in gone:
             yield x, y
 
@@ -18,6 +22,13 @@ def product(*iterables):
     """
     https://stackoverflow.com/questions/55882454/is-there-a-way-to-efficiently-compute-the-product-of-two-or-more-iterators
     """
+    if len(iterables) == 0:
+        yield []
+        return
+    if len(iterables) == 1:
+        for e in iterables[0]:
+            yield [e]
+        return
     if len(iterables) == 2:
         yield from simple_product(*iterables)
         return
@@ -34,6 +45,10 @@ def product(*iterables):
 
 def partitions(l):
     """Returns a generator that yields all partitions of the list `l`."""
+    if len(l) == 0:
+        yield []
+        return
+
     if len(l) == 1:
         yield [l]
         return
