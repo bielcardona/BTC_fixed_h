@@ -1,5 +1,5 @@
-# Supplementary files for "On binary tree-child phylogenetic networks with a fixed number of hybrid nodes"
-## By G. Cardona
+# Supplementary files for "Counting and Enumerating Tree-Child Networks and Their Subclasses"
+## By G. Cardona and L. Zhang
 
 If you have `pipenv` installed, the requirements can be installed by executing `pipenv install`. Notice however that `graphviz` must be installed previously.
 Once installed, the jupyter 
